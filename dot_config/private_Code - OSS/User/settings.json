@@ -1,0 +1,17 @@
+{
+    "zig.path": "zig",
+    "zig.zls.path": "zls",
+    "zig.initialSetupDone": true,
+    "workbench.panel.defaultLocation": "right",
+    "terminal.integrated.fontSize": 10,
+    "zig.zls.enableAutofix": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "zig.zls.inlayHintsHideRedundantParamNames": true,
+    "zig.zls.inlayHintsHideRedundantParamNamesLastToken": true,
+    "editor.formatOnSave": true,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "editor.rulers": [
+        100,
+    ],
+    "editor.minimap.enabled": false
+}

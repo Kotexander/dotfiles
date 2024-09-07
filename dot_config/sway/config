@@ -1,0 +1,26 @@
+# Read `man 5 sway` for a complete reference.
+
+default_border pixel
+
+input 1267:12729:ASUE140D:00_04F3:31B9_Touchpad  {
+	tap enabled
+}
+
+output eDP-1 position 0,180
+output HDMI-A-1 position 1440,0
+
+for_window [app_id="nm-connection-editor"] floating enable
+for_window [app_id="org.kde.ark"] floating enable
+for_window [app_id="org.kde.dolphin"] floating enable
+for_window [app_id="thunar"] floating enable
+for_window [app_id="org.kde.gwenview"] floating enable
+for_window [app_id="clipse"] floating enable
+for_window [app_id="org.pulseaudio.pavucontrol"] floating enable
+for_window [app_id="blueman-manager"] floating enable
+
+for_window [shell="xwayland"] title_format "[XWayland] %title"
+
+bindswitch --reload --locked lid:on output eDP-1 disable
+bindswitch --reload --locked lid:off output eDP-1 enable
+
+include config.d/*

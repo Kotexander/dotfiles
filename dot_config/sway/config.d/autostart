@@ -1,0 +1,17 @@
+exec swaync
+# exec systemctl --user start plasma-polkit-agent
+exec /usr/lib/polkit-kde-authentication-agent-1
+exec nm-applet
+exec blueman-applet
+exec waybar
+exec clipse -listen
+# exec autotiling-rs
+
+set $lock swaylock -Ffe -c 202020
+
+exec swayidle -w \
+    timeout 60 "swaymsg 'output * power off'; $lock" \
+    resume "swaymsg 'output * power on'" \
+    timeout 120 "systemctl suspend" \
+    before-sleep "playerctl pause; $lock" \
+    lock "$lock"
