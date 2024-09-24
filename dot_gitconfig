@@ -1,3 +1,5 @@
 [user]
 	name = Alexander Koterev
 	email = kotexander@gmail.com
+[credential]
+	helper = store
